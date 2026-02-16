@@ -298,7 +298,7 @@ _cmux_ls() {
   local repo_root
   repo_root="$(_cmux_repo_root)" || { echo "Not in a git repo"; return 1; }
 
-  git -C "$repo_root" worktree list | grep '\.worktrees/'
+  git -C "$repo_root" worktree list
 }
 
 _cmux_merge() {
